@@ -1,0 +1,42 @@
+Generate synthetic e-commerce data for 5 CSV files: customers.csv, products.csv, orders.csv, order_items.csv, and reviews.csv.
+
+1. customers.csv columns:
+   - customer_id (unique integer)
+   - name (string)
+   - email (string)
+   - city (string)
+   - signup_date (YYYY-MM-DD)
+
+2. products.csv columns:
+   - product_id (unique integer)
+   - product_name (string)
+   - category (string)
+   - price (decimal)
+   - stock (integer)
+
+3. orders.csv columns:
+   - order_id (unique integer)
+   - customer_id (matches customers.csv)
+   - order_date (YYYY-MM-DD)
+   - total_amount (decimal)
+
+4. order_items.csv columns:
+   - item_id (unique integer)
+   - order_id (matches orders.csv)
+   - product_id (matches products.csv)
+   - quantity (integer)
+   - subtotal (decimal)
+
+5. reviews.csv columns:
+   - review_id (unique integer)
+   - product_id (matches products.csv)
+   - rating (1–5 integer)
+   - review_text (short review)
+   - review_date (YYYY-MM-DD)
+
+Make sure relationships are consistent:
+- Each order belongs to a customer.
+- Each order contains 1–5 order items.
+- Reviews reference valid product_ids.
+
+Generate around 50–100 rows per file with realistic values.
